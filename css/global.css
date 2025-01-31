@@ -1,0 +1,79 @@
+:root {
+  --clr-1: #4caf50;
+  --clr-2: #151515;
+  --clr-3: #252525;
+  --clr-4: #fff;
+  --clr-5: #B01020;
+  --clr-6: #B01020;
+  --clr-7: #aaaaaa;
+
+  --clr-bg: #aaaaaa10;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+button {
+  font-family: "Sofia Sans", sans-serif;
+}
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+h5 {
+  font-size: 1rem;
+}
+p,
+li {
+  font-size: 1rem;
+}
+a,
+button {
+  font-size: 0.8rem;
+}
+a {
+  color: var(--clr-4);
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--clr-6);
+}
+span {
+  background: #cdff00;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+hr {
+  border: none;
+  border-top: solid 1px var(--clr-5);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--clr-1);
+}
+::-webkit-scrollbar-track {
+  border-left: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-2);
+}

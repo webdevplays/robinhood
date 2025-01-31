@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Sofia Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background-color: #73a52c;
+  overflow-x: hidden;
+}
+
+#hero-sect{
+  display: flex; align-items: top; justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 8rem;
+
+  z-index: 0 !important;
+}
+.container {
+  width: 1400px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.description {
+  width: 60%;
+  margin-bottom: 5rem;
+}
+.description hr {
+  margin-bottom: 2rem;
+}
+.description h3 {
+  margin-bottom: 1rem;
+}
+
+button {
+  min-width: 150px;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+button:hover {
+  filter: brightness(50%);
+}
+
+.btn-1 {
+  color: var(--clr-4);
+  background-color: var(--clr-5);
+  background: #cdff00;
+  border: none;
+}
+.btn-2 {
+  color: var(--clr-4);
+  background-color: var(--clr-2);
+  border: solid 2px var(--clr-3);
+}
+
+/*-- bg --*/
+.wave {
+  background: var(--clr-bg);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -3em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -6em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+/*-- header --*/
+
+#header {
+  background-color: var(--clr-1);
+  border-bottom: solid 2px var(--clr-3);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position: sticky;
+  top: 0;
+  z-index: 10 !important;
+}
+
+#header .flex:nth-child(1) {
+  justify-self: start;
+}
+#header .flex:nth-child(1) img {
+  height: 1.5rem;
+}
+#header .flex:nth-child(2) {
+  justify-self: center;
+  gap: 2rem;
+}
+#header .flex:nth-child(3) {
+  justify-self: end;
+  gap: 1rem;
+}
+
+#header > a {
+  display: none;
+  z-index: 10 !important;
+
+  background-color: transparent;
+  border: none;
+}
+
+/*-- hero --*/
+/*-- hero --*/
+/*-- hero --*/
+
+#hero {
+  padding-block: 8rem;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#hero .grid-1 h1 {
+  margin-bottom: 1rem;
+}
+
+#hero .grid-1 p {
+  margin-bottom: 2rem;
+}
+
+#img {
+  position: relative;
+}
+#hero-ollie {
+  position: relative;
+  z-index: 1;
+
+  max-width: 500px;
+}
+#hero-base {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+
+  max-width: 500px;
+}
+
+/*-- exchanges --*/
+/*-- exchanges --*/
+/*-- exchanges --*/
+
+#exchanges {
+  background-color: var(--clr-2);
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding-top: 3rem;
+}
+#exchanges .grid-2 .flex {
+  background-color: var(--clr-2);
+  background: linear-gradient(0deg, var(--clr-2) 0%, var(--clr-3) 100%);
+  border: solid 2px var(--clr-3);
+  border-radius: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+#exchanges .grid-2 .flex img {
+  height: 1.5rem;
+}
+
+/*-- about --*/
+/*-- about --*/
+/*-- about --*/
+
+#about {
+  background-color: var(--clr-1);
+  overflow-x: hidden;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+#about .grid-4 div {
+  background-color: var(--clr-2);
+  border: solid 2px var(--clr-3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+#about .grid-4 div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#about .grid-4 div img {
+  width: 100%;
+
+  background-color: var(--clr-2);
+  border-radius: 1rem;
+
+  transition: 300ms;
+}
+#about .grid-4 div img:hover {
+  transform: scale(105%);
+}
+#about .grid-4 div h4 {
+  text-decoration: underline;
+}
+
+/*-- token --*/
+/*-- token --*/
+/*-- token --*/
+
+#token {
+  background-color: var(--clr-2);
+  position: relative;
+  overflow-x: hidden;
+}
+.grid-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+#token .grid-5 ul {
+  background-color: var(--clr-2);
+  background: linear-gradient(0deg, var(--clr-2) 0%, var(--clr-3) 100%);
+  border: solid 2px var(--clr-3);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.ca {
+  white-space: nowrap;
+  overflow: hidden;
+}
+#token .grid-5 ul li {
+  padding: 2rem;
+  border-bottom: solid 2px var(--clr-3);
+}
+#token .grid-5 ul li:nth-child(3) {
+  border-bottom: none;
+}
+#token .grid-5 p {
+  color: var(--clr-7);
+  margin-top: 1rem;
+}
+#token .grid-5 img {
+  max-width: 500px;
+  justify-self: center;
+}
+
+/*-- tokenomics --*/
+/*-- tokenomics --*/
+/*-- tokenomics --*/
+
+#tokenomics {
+  background-color: var(--clr-1);
+  padding-block: 5rem;
+}
+
+#tokenomics .container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+#tokenomics .container p,
+#tokenomics .container a {
+  font-size: 1rem;
+  color: var(--clr-7);
+}
+
+/*-- buy --*/
+/*-- buy --*/
+/*-- buy --*/
+
+#buy {
+  background-color: var(--clr-2);
+}
+.grid-6 {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 10rem;
+}
+
+#buy-ollie {
+  max-width: 450px;
+}
+#buy .grid-6 div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#buy .grid-6 div > div {
+  background-color: var(--clr-2);
+  background: linear-gradient(0deg, var(--clr-2) 0%, var(--clr-3) 100%);
+  border: solid 2px var(--clr-3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+#buy .grid-6 h4 {
+  margin-bottom: 1rem;
+}
+
+/*-- join us --*/
+/*-- join us --*/
+/*-- join us --*/
+
+#join {
+  padding-block: 5rem;
+}
+#join > .flex {
+  flex-direction: column;
+  background-color: var(--clr-5);
+  background: #4caf50;
+  border: none;
+  border-radius: 1rem;
+  padding: 3rem 5rem;
+  text-align: center;
+}
+#join > .flex h3 {
+  padding-bottom: 1rem;
+}
+#join > .flex p {
+  padding-bottom: 2rem;
+}
+
+/*-- footer --*/
+/*-- footer --*/
+/*-- footer --*/
+
+#footer {
+  background-color: #000;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.grid-8 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15rem;
+}
+#footer .grid-8 .flex,
+#footer .grid-8 h4 {
+  margin-bottom: 1rem;
+}
+#footer .grid-8 .flex img {
+  height: 1.5rem;
+}
+#footer .grid-8 p {
+  font-size: 0.8rem;
+}
+#footer .grid-8 div:nth-child(2),
+#footer .grid-8 div:nth-child(3) {
+  text-align: right;
+}
+
+<style>
+  /* Set custom size for the video */
+  .custom-video {
+    width: 320px; /* Set a fixed width */
+    height: 180px; /* Set a fixed height to maintain aspect ratio */
+    max-width: 100%; /* Ensures it doesn't exceed the container width on smaller screens */
+  }
+
+  /* Optional: Adjust layout for mobile screens */
+  @media (max-width: 768px) {
+    .custom-video {
+      width: 420px; /* Adjust width for smaller screens */
+      height: 300px; /* Adjust height to maintain aspect ratio */
+    }
+
+    h4 {
+      font-size: 14px; /* Adjust font size for better readability */
+    }
+  }
+</style>
+
+/* New Section Styling */
+.custom-gallery-section {
+  padding: 20px;
+  background-color: #9c27b0; /* Optional: Light background */
+}
+
+/* Gallery Container */
+.custom-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Spacing between items */
+  max-width: 900px; /* Optional: Limit section width */
+  margin: 0 auto; /* Center the gallery */
+}
+
+/* Gallery Items (Images) */
+.custom-gallery__item img {
+  width: 100%; /*
